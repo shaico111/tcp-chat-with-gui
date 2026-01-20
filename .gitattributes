@@ -1,0 +1,68 @@
+# =======================================================
+# Core Configuration
+# =======================================================
+# Set default behavior to automatically normalize line endings.
+# This ensures files are saved as LF in the repo, but checked out
+# as CRLF on Windows (and LF on Mac/Linux).
+* text=auto
+
+# =======================================================
+# Source Code
+# =======================================================
+# Explicitly declare text files to ensure they are always treated as text.
+# The 'diff=python' helps GitHub/Git show better diffs for Python logic.
+*.py text diff=python
+*.js text
+*.html text
+*.css text
+
+# =======================================================
+# Scripts (OS Specific)
+# =======================================================
+# Windows scripts MUST have CRLF to work properly
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Bash scripts MUST have LF to work properly on Linux/Mac
+*.sh text eol=lf
+
+# =======================================================
+# Documentation & Data
+# =======================================================
+*.md text
+*.txt text
+*.json text
+*.csv text
+*.xml text
+*.yml text
+*.yaml text
+
+# =======================================================
+# Binary Files
+# =======================================================
+# Treat these as binary so Git doesn't try to change line endings
+# or try to show text diffs (which creates garbage).
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.dll binary
+*.exe binary
+*.pyc binary
+*.db binary
+*.sqlite binary
+*.docx binary
+
+# =======================================================
+# Export Ignore
+# =======================================================
+# When someone downloads the "Source Code (zip)" from GitHub,
+# these files will be excluded (keeps the zip clean).
+.gitattributes export-ignore
+.gitignore export-ignore
+.github export-ignore
+__pycache__ export-ignore
+*.pyc export-ignore
